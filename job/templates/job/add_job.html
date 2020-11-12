@@ -1,0 +1,51 @@
+
+   {% extends 'base.html' %}
+   {% load bootstrap4 %}
+   {% block body %}
+   
+   <!-- bradcam_area  -->
+    <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>Add new job</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+
+    <div class="job_details_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="job_details_header">
+                        
+                    </div>
+                
+                    <div class="apply_job_form white-bg">
+                        <h4>Apply for the job</h4>
+                        <form  method = "POST" enctype = "multipart/form-data">
+                            <form action="/url/to/submit/" method="post" class="form">
+                                {% csrf_token %}
+                                {% bootstrap_form form %}
+                                {% buttons %}
+                                    <button type="submit" class="boxed-btn3 w-100">Apply now</button>
+                                                                 
+                                {% endbuttons %}
+                            </form>
+                        </form>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+
+   
+    {% endblock body %}
+
+
+    
